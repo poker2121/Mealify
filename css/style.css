@@ -44,25 +44,33 @@ nav {
   z-index: 9999;
   background-color: #fff;
   box-shadow: 0px 0px 14px 0px #0000001b;
-
 }
 
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 5px;
+  padding: 1.5625rem 0.3125rem;
+}
 
+nav #menu {
+  display: none;
+}
+
+nav label {
+  color: #000000;
+  margin-left: auto;
+  display: none;
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-family: var(--secondry-font-family);
   font-weight: bold;
   color: #000;
 }
 
- .logo::after {
+.logo::after {
   content: ".";
   color: var(--main-color);
 }
@@ -71,21 +79,22 @@ nav .container .nav-links ul {
   display: flex;
   gap: 25px;
   font-family: var(--secondry-font-family);
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 600;
   color: var(--second-color);
   position: relative;
 }
 
-
 nav .container .nav-links a {
   color: var(--second-color);
   position: relative;
-  padding: 5px 0;
+  padding: 0.3125rem 0;
   transition: color 300ms;
-  padding: 0 10px;
+  padding: 0 5px;
 }
-
+nav .mode-btn i{
+  font-size: 1.5rem;
+}
 nav .container .nav-links a span {
   color: #000;
 }
@@ -93,27 +102,30 @@ nav .container .nav-links a span {
 nav .container .nav-links a:hover {
   color: #000;
 }
-
+nav .container .nav-links a.active::before {
+  width: 100%;
+}
 nav .container .nav-links a::before {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -7px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 3px;
+  height: 2.5px;
   background-color: var(--main-color);
-  transition: width 300ms;
+  transition: width 400ms;
 }
 
 nav .container .nav-links a:hover::before {
-  width: 100%;
+  width: 100%; 
 }
 
-nav .container i {
-  cursor: pointer;
-  font-size: 25px;
+nav .container .nav-links a.active::before {
+  width: 100%; 
 }
+
+
 
 /*!######### Navbar section End ######## */
 
@@ -162,6 +174,7 @@ header .container .content .btn-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  
   gap: 50px;
 }
 
@@ -179,7 +192,7 @@ header .container .animted-img img {
   height: auto;
 }
 
-.header-content .video-btn {
+.content .video-btn {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -187,23 +200,34 @@ header .container .animted-img img {
   transition: color 400ms;
 }
 
+.content .video-btn {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: color 400ms;
+  vertical-align: baseline;
+}
+
+.video-btn:hover {
+  color: var(--main-color);
+}
+
 .video-btn .icon {
   width: 3.4375rem;
   height: 3.4375rem;
   border-radius: 50%;
-  background-image: linear-gradient(to right, var(--main-color) 0 50%, transparent 50% 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0 50%,
+    transparent 50% 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   margin-right: 0.3125rem;
   position: relative;
-}
-
-.video-btn {
-  font-weight: 600;
-  font-size: 16px;
-  font-family: var(--secondry-font-family);
+  
 }
 
 .video-btn .icon::before {
@@ -212,7 +236,7 @@ header .container .animted-img img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: whitesmoke;
+  background-color: hsl(0, 0%, 100%);
   width: 2.5rem;
   height: 2.5rem;
   border-radius: inherit;
@@ -277,26 +301,26 @@ header .container .animted-img img {
 
 /**######### Chefs section Start ######## */
 #chefs .container {
-  margin: 50px auto;
-  padding: 40px 5px;
+  margin: 3.125rem auto;
+  padding: 2.5rem 0.3125rem;
 }
 
 .main-title {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
 }
 
 .main-title h2 {
   color: #7f7f90;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   font-family: var(--secondry-font-family);
 }
 
 .main-title p {
   font-family: var(--primary-font-family);
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .main-title p span {
@@ -304,7 +328,7 @@ header .container .animted-img img {
 }
 
 #chefs .container .chefs-cards {
-  padding-block: 20px;
+  padding-block: 1.25rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -378,7 +402,7 @@ header .container .animted-img img {
   transition: transform 600ms ease;
 }
 
-/* Social icons style */
+
 .chefs-cards .social-box i {
   font-size: 18px;
   padding: 10px 5px;
@@ -397,7 +421,8 @@ header .container .animted-img img {
 /**######### Gallery section Start ######## */
 #gallery {
   background-color: #eee;
-  margin: 50px auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 40px 5px;
 }
 
@@ -413,25 +438,26 @@ header .container .animted-img img {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1.25rem;
-  height: 80rem;
+  height: 75rem;
+
 }
 
 .gallery-menu picture {
   border: 5px solid #fff;
   position: relative;
   overflow: hidden;
-  width: calc((100% - (2 * 1.0rem)) / 3);
+  width: calc((100% - (2 * 1rem)) / 3);
 }
 
 .gallery-menu picture img {
   width: 100%;
-  transition: scale 500ms;
+  transition: scale 400ms;
 }
 
 .gallery-menu picture .layer {
   width: 100%;
   height: 100%;
-  padding: 0.9200rem;
+  padding: 0.920rem;
   background-color: #00000096;
   position: absolute;
   top: 100%;
@@ -439,7 +465,6 @@ header .container .animted-img img {
   z-index: 99;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -583,19 +608,21 @@ iframe {
 #contact form button:hover {
   background-color: #e61414;
 }
+
 /*!######### Contact section End ######## */
 
 
 /**######### Footer section End ######## */
 
 footer {
-  background-image: linear-gradient(rgba(29, 29, 29, 0.6), #0009),url(../images/textured-metal-background.jpg);
+  background-image: linear-gradient(rgba(29, 29, 29, 0.6), #0009), url(../images/textured-metal-background.jpg);
   color: #fff;
   box-shadow: 0px -1px 5px #0007;
   background-size: contain;
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 footer p {
   font-family: var(--secondry-font-family);
   font-size: 17px;
@@ -630,6 +657,7 @@ footer .about img {
   width: 2.5rem;
   height: 2.5rem;
 }
+
 footer .logo {
   color: white;
 }
@@ -640,10 +668,11 @@ footer .about h3 {
   border-bottom: 2px solid #ddd6;
   margin-bottom: 0.625rem;
 }
-footer  h3 {
- font-family: "inter",sans-serif;
- font-size: 18px;
- font-weight: 700;
+
+footer h3 {
+  font-family: "inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 footer .about .social-links {
@@ -685,7 +714,8 @@ footer .sunscription-group button {
   color: white;
   font-size: 16px;
 }
-footer .sunscription-group  input {
+
+footer .sunscription-group input {
   font-size: 16px;
 
 }
@@ -704,7 +734,7 @@ footer .quick-links ul li {
   position: relative;
   transition: transform 400ms,
     background-color 400ms;
-    font-family: var(--secondry-font-family);
+  font-family: var(--secondry-font-family);
 }
 
 footer .quick-links ul li:hover {
@@ -740,4 +770,3 @@ footer .contact-details ul li i {
 }
 
 /*!######### Footer section End ######## */
-
