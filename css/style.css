@@ -498,7 +498,6 @@ header .container .animted-img img {
 }
 
 #contact .details {
-
   margin-block: 1.5625rem;
   display: flex;
   flex-wrap: wrap;
@@ -510,7 +509,7 @@ iframe {
   height: 21.875rem;
 }
 
-#contact .details>div {
+#contact .details > div {
   width: calc(50% - var(--gap));
   display: flex;
   align-items: center;
@@ -519,7 +518,7 @@ iframe {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#contact .details>div h3 {
+#contact .details > div h3 {
   color: #7d7d7d;
   font-size: 1.25rem;
   font-weight: 700;
@@ -553,7 +552,7 @@ iframe {
   box-shadow: 0 0 1.875rem #00000014;
 }
 
-#contact form>* {
+#contact form > * {
   width: 100%;
   font-family: var(--secondry-font-family);
 }
@@ -565,7 +564,6 @@ iframe {
   border: 2px solid rgb(232, 229, 229);
   color: #212529;
   transition: border-color 400ms;
-  line-height: 20px;
   font-size: 16px;
 }
 
@@ -582,7 +580,6 @@ iframe {
 }
 
 #contact .input-group input {
-
   width: calc(50% - 0.5rem);
 }
 
@@ -608,6 +605,8 @@ iframe {
 #contact form button:hover {
   background-color: #e61414;
 }
+
+
 
 /*!######### Contact section End ######## */
 
